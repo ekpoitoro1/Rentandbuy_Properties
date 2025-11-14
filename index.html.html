@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rentandbuy Properties — Nigeria</title>
+  <meta name="description" content="Rentandbuy Properties — Property sales, rents, and services across Nigeria.">
+
+  <style>
+    :root{
+      --primary: #44a6b6;
+      --dark: #0f3b3f;
+      --muted: #6b7b7d;
+      --bg: #f6fbfb;
+      --card: #ffffff;
+      --maxw: 1100px;
+      --radius: 12px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#0b2b2d;line-height:1.45}
+    a{color:var(--primary);text-decoration:none}
+    header{background:linear-gradient(180deg, rgba(68,166,182,0.06), transparent);border-bottom:1px solid rgba(12,45,46,0.03);}
+    .container{max-width:var(--maxw);margin:0 auto;padding:20px}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:10px;background:var(--primary);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    .menu{display:flex;gap:14px;align-items:center}
+    .menu a{padding:10px 12px;border-radius:8px;font-weight:600}
+    .menu a:hover{background:rgba(68,166,182,0.08)}
+    .cta{background:var(--primary);color:#fff;padding:9px 14px;border-radius:10px;font-weight:700}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:24px;align-items:center;padding:46px 0}
+    .hero-card{background:var(--card);padding:28px;border-radius:16px;box-shadow:0 6px 20px rgba(10,30,31,0.06)}
+    .search-row{display:flex;gap:10px;margin-top:12px}
+    .search-row input,.select{padding:12px;border-radius:10px;border:1px solid rgba(12,45,46,0.08);flex:1}
+    .search-row button{background:var(--primary);color:#fff;border:none;padding:12px 16px;border-radius:10px;font-weight:700}
+
+    /* quick features */
+    .features{display:flex;gap:12px;margin-top:16px}
+    .feature{background:white;padding:12px;border-radius:10px;flex:1;text-align:center}
+
+    main{padding:34px 0}
+    h1,h2,h3{margin:0 0 12px 0}
+    p.lead{color:var(--muted)}
+
+    /* Properties */
+    .tabs{display:flex;gap:8px;margin:18px 0}
+    .tab{padding:10px 14px;background:transparent;border-radius:10px;border:1px solid rgba(12,45,46,0.05);cursor:pointer;font-weight:700}
+    .tab.active{background:var(--primary);color:#fff}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+    .card{background:var(--card);padding:12px;border-radius:12px;box-shadow:0 6px 14px rgba(12,45,46,0.04)}
+    .media{border-radius:10px;overflow:hidden;height:180px}
+    .media img{width:100%;height:100%;object-fit:cover;display:block}
+    .card h4{margin:10px 0 6px}
+    .card .meta{display:flex;gap:8px;color:var(--muted);font-size:14px}
+
+    /* gallery thumbnails */
+    .thumbs{display:flex;gap:6px;margin-top:8px}
+    .thumbs img{width:48px;height:48px;object-fit:cover;border-radius:6px;cursor:pointer;border:2px solid transparent}
+    .thumbs img.selected{border-color:var(--primary)}
+
+    /* services & owners */
+    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+    .service-card{padding:16px;background:linear-gradient(180deg,#fff,#fcfeff);border-radius:12px}
+
+    .owners, .jv{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .form-card{background:var(--card);padding:16px;border-radius:12px}
+    form label{display:block;font-weight:600;margin:8px 0 6px}
+    input[type=text],input[type=email],textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(12,45,46,0.06)}
+    button[type=submit]{background:var(--primary);color:white;border:none;padding:10px 14px;border-radius:8px;margin-top:10px;font-weight:700}
+
+    /* contact & map */
+    .map{border-radius:12px;overflow:hidden;height:320px}
+
+    footer{padding:20px 0;margin-top:24px;border-top:1px solid rgba(12,45,46,0.04);}
+    .footer-grid{display:flex;gap:20px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+
+    /* responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr;}
+      .owners,.jv{grid-template-columns:1fr}
+      .hero-card{order:2}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">
+          <div class="logo">RP</div>
+          <div>
+            <div style="font-weight:800">Renandbuy properties</div>
+            <div style="font-size:13px;color:var(--muted)">
+                Making Real esatate products and services easily accessible to everyone
+            </div style="font-size:13px;color:var(--muted)">Real Estate - Nigeria
+          </div>
+        </div>
+        <div class="menu" aria-label="Main menu">
+          <a href="#home">Home</a>
+          <a href="#properties">Properties</a>
+          <a href="#services">Services</a>
+          <a href="#owners">For Owners</a>
+          <a href="#contact" class="cta">Contact Us</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="container hero">
+    <div>
+      <h1>Find your next home or investment across Nigeria</h1>
+      <p class="lead">Sales, rent, leases; we connect buyers, tenants and investors with quality properties and trusted services.</p>
+
+      <div class="hero-card">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <strong>Search properties</strong>
+            <div style="color:var(--muted);font-size:14px">Buy or Rent across major Nigerian cities</div>
+          </div>
+          <div style="text-align:right;color:var(--muted)">Call us: <strong>+234 9079063117</strong></div>
+        </div>
+
+        <div class="search-row" style="margin-top:12px">
+          <input placeholder="Search city, estate or landmark" aria-label="Search">
+          <select class="select" aria-label="Transaction type">
+            <option>Buy</option>
+            <option>Rent</option>
+            <option>Lease</option>
+          </select>
+          <button>Search</button>
+        </div>
+
+        <div class="features">
+          <div class="feature">Verified listings</div>
+          <div class="feature">Flexible payments</div>
+          <div class="feature">Aftercare services</div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="hero-card">
+      <h3>Featured Area - Lagos</h3>
+      <p class="lead">Browse curated estates apartments and plots in Lagos Island - Lekki, Ikoyi, 
+        Victoria Island, Ikate, Osapa, Ologolo, Idado, Agungi, 
+        Chevron, Orchid, Ikota, Ajah, Sangotedo and Lagos mainland - Ikeja, Surulere, Gbagada, Ketu, Agege, Ikotun, Egbeda, Ipaja,, Baruwa Ayobo etc .</p>
+      <div style="margin-top:12px">
+        <div style="font-weight:800">Quick links</div>
+        <ul style="padding-left:18px;color:var(--muted)">
+          <li>View available apartments</li>
+          <li>View available lands</li>
+          <li>Request valuation</li>
+        </ul>
+      </div>
+    </aside>
+  </section>
+
+  <main class="container">
+    <!-- Properties -->
+    <section id="properties">
+      <h2>Properties</h2>
+      <p class="lead">Switch between buy and rent listings</p>
+
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-tab="buy">Buy</button>
+        <button class="tab" data-tab="rent">Rent</button>
+      </div>
+
+      <!-- BUY -->
+      <div class="tab-panel" data-panel="buy">
+        <h3>Apartments for Sale</h3>
+        <div class="grid">
+          <!-- Sample card with gallery thumbnails (5-15 images allowed) -->
+          <!-- We'll show 5 images per item to remain simple -->
+          <article class="card">
+            <div class="media"><img src="C:\Users\hp\Desktop\Rentandbuy Properties\Sales Properties\1\1.Png" alt="3-bedroom apartment Lagos"></div>
+            <h4>3-Bedroom Apartment - Lekki</h4>
+            <div class="meta">₦65,000,000 · 3 beds · 2 baths · 120 sqm</div>
+            <div class="thumbs" data-main="C:\Users\hp\Desktop\Rentandbuy Properties\Sales Properties\1\2.Png">
+              <img src="C:\Users\hp\Desktop\Rentandbuy Properties\Sales Properties\1\3.Png" alt="" class="selected">
+              <img src="C:\Users\hp\Desktop\Rentandbuy Properties\Sales Properties\1\4.Png" alt="">
+              <img src="C:\Users\hp\Desktop\Rentandbuy Properties\Sales Properties\1\5.Png" alt="">
+              <img src="C:\Users\hp\Desktop\Rentandbuy Properties\Sales Properties\1\6.Png" alt="">
+              <img src="C:\Users\hp\Desktop\Rentandbuy Properties\Sales Properties\1\7.Png" alt="">
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="media"><img src="C:\Users\hp\Desktop\Rentandbuy Properties\Sales Properties\2\1.Jpg" alt="2-bedroom apartment Abuja"></div>
+            <h4>4-Bedroom Maissionette - Ikoyi, Lagos</h4>
+            <div class="meta">₦1,700,000,000 · 4 beds · 5 bath · 350 sqm</div>
+            <div class="thumbs">
+              <img src="C:\Users\hp\Desktop\Rentandbuy Properties\Sales Properties\2\2.Jpg" alt="" class="selected">
+              <img src="C:\Users\hp\Desktop\Rentandbuy Properties\Sales Properties\2\3.Jpg" alt="">
+              <img src="C:\Users\hp\Desktop\Rentandbuy Properties\Sales Properties\2\4.Jpg" alt="">
+              <img src="C:\Users\hp\Desktop\Rentandbuy Properties\Sales Properties\2\5.Jpg" alt="">
+              <img src="C:\Users\hp\Desktop\Rentandbuy Properties\Sales Properties\2\6.Jpg" alt="">
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="media"><img src="C:\Users\hp\Desktop\Rentandbuy Properties\Sales Properties\3\1.Jpg" alt="4-bedroom townhouse Port Harcourt"></div>
+            <h4>3-Bedroom Appartment with BQ - Ikate, Lekki</h4>
+            <div class="meta">₦110,000,000 · 3 beds · 3 baths · 300 sqm</div>
+            <div class="thumbs">
+              <img src="C:\Users\hp\Desktop\Rentandbuy Properties\Sales Properties\3\2.Jpg" alt="" class="selected">
+              <img src="C:\Users\hp\Desktop\Rentandbuy Properties\Sales Properties\3\3.Jpg" alt="">
+              <img src="C:\Users\hp\Desktop\Rentandbuy Properties\Sales Properties\3\4.Jpg" alt="">
+              <img src="C:\Users\hp\Desktop\Rentandbuy Properties\Sales Properties\3\5.Jpg" alt="">
+              <img src="C:\Users\hp\Desktop\Rentandbuy Properties\Sales Properties\3\6.Jpg" alt="">
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="media"><img src="https://picsum.photos/seed/apt4/800/600" alt="2-bedroom apartment Kano"></div>
+            <h4>2-Bedroom Apartment — Kano</h4>
+            <div class="meta">₦22,000,000 · 2 beds · 1 bath · 75 sqm</div>
+            <div class="thumbs">
+              <img src="https://picsum.photos/seed/apt4/200/150" alt="" class="selected">
+              <img src="https://picsum.photos/seed/apt4b/200/150" alt="">
+              <img src="https://picsum.photos/seed/apt4c/200/150" alt="">
+              <img src="https://picsum.photos/seed/apt4d/200/150" alt="">
+              <img src="https://picsum.photos/seed/apt4e/200/150" alt="">
+            </div>
+          </article>
+
+        </div>
+
+        <h3 style="margin-top:22px">Lands for Sale and Joint Venture</h3>
+        <div class="grid" style="margin-bottom:8px">
+          <article class="card">
+            <div class="media"><img src="https://picsum.photos/seed/land1/800/600" alt="land for sale Ogun"></div>
+            <h4>Plot 1, 600sqm — Ogun</h4>
+            <div class="meta">₦7,500,000 · 600 sqm</div>
+            <div class="thumbs">
+              <img src="https://picsum.photos/seed/land1/200/150" alt="" class="selected">
+              <img src="https://picsum.photos/seed/land1b/200/150" alt="">
+              <img src="https://picsum.photos/seed/land1c/200/150" alt="">
+              <img src="https://picsum.photos/seed/land1d/200/150" alt="">
+              <img src="https://picsum.photos/seed/land1e/200/150" alt="">
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="media"><img src="https://picsum.photos/seed/land2/800/600" alt="land for sale Abuja"></div>
+            <h4>Estate Plot 450sqm — Abuja</h4>
+            <div class="meta">₦28,000,000 · 450 sqm</div>
+            <div class="thumbs">
+              <img src="https://picsum.photos/seed/land2/200/150" alt="" class="selected">
+              <img src="https://picsum.photos/seed/land2b/200/150" alt="">
+              <img src="https://picsum.photos/seed/land2c/200/150" alt="">
+              <img src="https://picsum.photos/seed/land2d/200/150" alt="">
+              <img src="https://picsum.photos/seed/land2e/200/150" alt="">
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- RENT -->
+      <div class="tab-panel" data-panel="rent" style="display:none">
+        <h3>Apartments for Rent (Long-let and Short-let)</h3>
+        <div class="grid">
+          <article class="card">
+            <div class="media"><img src="C:\Users\hp\Desktop\Rentandbuy Properties\Rental Properties\1.\SL1.JPG" alt="apartment for rent in Ikate,Lagos"></div>
+            <h4>2-Bedroom - Ikate, Lekki. [Short-let]</h4>
+            <div class="meta">₦170,000 / daily · 2 beds · 3 baths · Swimming pool · Gym </div>
+            <div class="thumbs">
+              <img src="C:\Users\hp\Desktop\Rentandbuy Properties\Rental Properties\1.\SL2.JPG" alt="" class="selected">
+              <img src="C:\Users\hp\Desktop\Rentandbuy Properties\Rental Properties\1.\SL3.JPG" alt="">
+              <img src="C:\Users\hp\Desktop\Rentandbuy Properties\Rental Properties\1.\SL4.JPG" alt="">
+              <img src="C:\Users\hp\Desktop\Rentandbuy Properties\Rental Properties\1.\SL5.JPG" alt="">
+              <img src="C:\Users\hp\Desktop\Rentandbuy Properties\Rental Properties\1.\SL7.JPG" alt="">
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="media"><img src="C:\Users\hp\Desktop\Rentandbuy Properties\Rental Properties\2\1.JPG" alt="apartment for rent Port Harcourt"></div>
+            <h4>2-Bedroom Apartment - Ikate, Lekki</h4>
+            <div class="meta">₦1,900,000 / month · 2 beds · 3 baths · Swimming Pool </div>
+            <div class="thumbs">
+              <img src="C:\Users\hp\Desktop\Rentandbuy Properties\Rental Properties\2\2.JPG" alt="" class="selected">
+              <img src="C:\Users\hp\Desktop\Rentandbuy Properties\Rental Properties\2\3.JPG" alt="">
+              <img src="C:\Users\hp\Desktop\Rentandbuy Properties\Rental Properties\2\4.JPG" alt="">
+              <img src="C:\Users\hp\Desktop\Rentandbuy Properties\Rental Properties\2\5.JPG" alt="">
+              <img src="C:\Users\hp\Desktop\Rentandbuy Properties\Rental Properties\2\6.JPG" alt="">
+            </div>
+          </article>
+        </div>
+
+        <h3 style="margin-top:18px">Lands for Lease</h3>
+        <div class="grid">
+          <article class="card">
+            <div class="media"><img src="https://picsum.photos/seed/rland1/800/600" alt="land for lease"></div>
+            <h4>Farmland — Ogun</h4>
+            <div class="meta">₦200,000 / year · 2 hectares</div>
+            <div class="thumbs">
+              <img src="https://picsum.photos/seed/rland1/200/150" alt="" class="selected">
+              <img src="https://picsum.photos/seed/rland1b/200/150" alt="">
+              <img src="https://picsum.photos/seed/rland1c/200/150" alt="">
+              <img src="https://picsum.photos/seed/rland1d/200/150" alt="">
+              <img src="https://picsum.photos/seed/rland1e/200/150" alt="">
+            </div>
+          </article>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Services -->
+    <section id="services" style="margin-top:30px">
+      <h2>Services</h2>
+      <p class="lead">We provide after-sales and technical services to keep your property secure and modern.</p>
+
+      <div class="services">
+        <div class="service-card"><h4>CLEANING SERVICES</h4><p class="lead">Professional apartment (Regular or deep) cleaning, estate cleaning and Post Construction cleaning.</p></div>
+        <div class="service-card"><h4>CCTV INSTALLATION</h4><p class="lead">Design and install CCTV systems with remote monitoring.</p></div>
+        <div class="service-card"><h4>SOLAR INSTALLATION</h4><p class="lead"> Commercial and Residential solar solutions, inverters and battery plus maintenance.</p></div>
+        <div class="service-card"><h4>INTERIOR & EXTERIOR DESIGN</h4><p class="lead">Design consultations, 3D mockups and designs of homes and offices.</p></div>
+        <div class="service-card"><h4>SMART HOME DESIGN</h4><p class="lead">Full Automation of homes including; remote lighting, access control and energy management etc.</p></div>
+        <div class="service-card"><h4>PROPERTY MANAGEMENT</h4><p class="lead">Tenant sourcing, rent collection and property maintenance.</p></div>
+      </div>
+    </section>
+
+    <!-- Owners and JV -->
+    <section id="owners" style="margin-top:30px">
+      <h2>Have a property to sell, rent or lease?</h2>
+      <p class="lead">Connect with Rentandbuy Properties - we advertise, evaluate and manage the transaction for you.</p>
+
+      <div class="owners" style="margin-top:12px">
+        <div class="form-card">
+          <h4>List your property</h4>
+          <form id="ownerForm">
+            <label>Full name</label>
+            <input type="text" name="name" required>
+            <label>Email Adress</label>
+            <input type="email" name="email" required>
+            <label>Phone Number</label>
+            <input type="text" name="phone " required>
+            <label>Property type (e.g., 3-Bedroom Apartment)</label>
+            <select name="ptype"><option>Apartment</option><option>Land</option><option>Commercial</option></select>
+            <label>Property Location</label>
+            <input type="text" name="location" required>
+            <label>Short description of the property</label>
+            <textarea name="description" rows="4"></textarea>
+            <button type="submit">Send Listing</button>
+          </form>
+
+
+          <script>
+          const scriptURL = 'https://script.google.com/macros/s/AKfycbzrAyroerAmtDv9V4DUacxmlxpPjVjTZlxHMbLEeST5KBUMx4dq6hnFG5KfQmq-Hbe5/exec';
+          
+
+          document.getElementById('propertyForm').addEventListener('submit', e => {
+            e.preventDefault();
+            const form = e.target;
+  
+            const data = {
+              formType: "List Property",
+              name: form.name.value,
+              email: form.email.value,
+              phone: form.phone.value,
+              propertyType: form.propertyType.value,
+              location: form.location.value,
+              description: form.description.value
+            };
+
+             fetch(scriptURL, {
+               method: 'POST',
+               body: JSON.stringify(data)
+             })
+             .then(response => alert("Thank you! Your property information has been submitted."))
+             .catch(error => alert("Error: " + error.message));
+           });
+           </script>
+        </div>
+
+        <div class="investor" style="margin-top:12px">
+          </div class="form-card">
+             <h4>Request Property Valuation</h4>
+             <p class="lead">We'll get back within 48 hours.</p>
+             <form id="FormData" method="post" form action="https://script.google.com/macros/s/AKfycbzrAyroerAmtDv9V4DUacxmlxpPjVjTZlxHMbLEeST5KBUMx4dq6hnFG5KfQmq-Hbe5/exec">
+               <label>Full name</label>
+               <input type="text" name="fullName" required>
+               <label>Email Adress</label>
+               <input type="email" name="email" required>
+               <label>Phone Number</label>
+               <input type="text" name="phone">
+               <label>Property Type/Description</label>
+               <input type="text" name="propertyDescription">
+               <label>Preferred city</label>
+               <input type="text" name="city">
+               <button type="submit">Request</button>
+             </form>
+        </div>
+
+          <script>
+          document.getElementById('valuationForm').addEventListener('submit', async (e) => {
+            e.preventDefault(); // prevent reload
+            const form = e.target;
+            const formData = new FormData(form);
+            const payload = Object.fromEntries(formData.entries());
+
+            const res = await fetch(form.action, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload)
+            });
+            const result = await res.json();
+
+            if (result.status === 'success') {
+              alert('Thank you! Your valuation request has been submitted.');
+              form.reset();
+            } else {
+              alert('Error submitting form: ' + result.message);
+            }
+           });
+           </script>
+            
+        </div>
+      </div>
+
+      <div style="margin-top:18px">
+        <h3>Joint Venture Deals</h3>
+        <p class="lead">Looking for JV partners for development projects? Tell us about your project and the type of partnership you seek.</p>
+        <div class="jv" style="margin-top:12px">
+          <div class="form-card">
+            <h4>Pitch your JV</h4>
+            <form>
+              <label>Project name</label>
+              <input type="text">
+              <label>Project location</label>
+              <input type="text">
+              <label>Estimated investment (₦)</label>
+              <input type="text">
+              <label>Short pitch</label>
+              <textarea rows="4"></textarea>
+              <button type="submit">Send Pitch</button>
+            </form>
+          </div>
+
+          <div class="form-card">
+            <h4>Why partner with us?</h4>
+            <ul style="color:var(--muted);padding-left:18px">
+              <li>Local market knowledge across major Nigerian states</li>
+              <li>Regulatory guidance and approvals support</li>
+              <li>Network of contractors and investors</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" style="margin-top:30px">
+      <h2>Contact Us (Send your Enquiries/Requirements)</h2>
+      <div style="display:grid;grid-template-columns:1fr 420px;gap:18px;margin-top:12px">
+        <div class="form-card">
+          <form id="contactForm">
+            <label>Your name</label>
+            <input type="text" name="name" required>
+            <label>Your Email</label>
+            <input type="email" name="email" required>
+            <label> Your Phone Number</label>
+            <input type="text" name="phone">
+            <label>Write Your Message Here</label>
+            <textarea name="message" rows="6"></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+
+          <div style="margin-top:12px;color:var(--muted)">
+            <div><strong>Office:</strong> 11 Olaide Tomori Street, Off Simbiat Abiola Way, Ikeja, Lagos, Nigeria</div>
+            <div><strong>Phone:</strong> +234 9079063117</div>
+            <div><strong>Email:</strong> rentandbuyproperties.ng@gmail.com</div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="map">
+            <!-- Lagos coordinates centered -->
+            <iframe width="100%" height="100%" frameborder="0" style="border:0" 
+              src="https://www.google.com/maps?q=6.465422,3.406448&z=12&output=embed" allowfullscreen>
+            </iframe>
+          </div>
+          <div style="margin-top:10px;text-align:center;color:var(--muted)">Office hours: Mon - Fri, 9:00 - 17:00 WAT</div>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>© <strong>Rentandbuy Properties</strong> — 2025. Serving buyers & investors across Nigeria.</div>
+      <div style="color:var(--muted)">Follow us: <a href="www.instagram.com/rentandbuyproperties_">Instagram</a> · <a href="www.twitter.com/rentandbuyprop_">Twitter</a> · <a href="#">LinkedIn</a></div>
+    </div>
+  </footer>
+
+  <script>
+    // tab switching
+    document.querySelectorAll('.tab').forEach(btn=>btn.addEventListener('click',e=>{
+      document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'))
+      e.currentTarget.classList.add('active')
+      const key = e.currentTarget.dataset.tab
+      document.querySelectorAll('[data-panel]').forEach(p=>p.style.display = p.dataset.panel===key ? 'block' : 'none')
+    }))
+
+    // thumbnail gallery: when clicked, replace parent media img
+    document.querySelectorAll('.card').forEach(card=>{
+      const thumbs = card.querySelectorAll('.thumbs img')
+      const media = card.querySelector('.media img')
+      if(!media) return
+      thumbs.forEach(t=>t.addEventListener('click', ()=>{
+        thumbs.forEach(x=>x.classList.remove('selected'))
+        t.classList.add('selected')
+        // build a larger image url if picsum seed exists
+        const src = t.src.replace('/200/150','/800/600')
+        media.src = src
+      }))
+    })
+
+    // simple form handlers (no backend)
+    function simpleNotify(msg){alert(msg)}
+    document.getElementById('contactForm').addEventListener('submit', e=>{e.preventDefault();simpleNotify('Message sent — we will contact you soon.')})
+    document.getElementById('ownerForm').addEventListener('submit', e=>{e.preventDefault();simpleNotify('Thanks — your property details have been received.')})
+  </script>
+</body>
+</html>
